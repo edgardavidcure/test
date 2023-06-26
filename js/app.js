@@ -31,7 +31,7 @@ function centerItem() {
 }
 
 async function getDataFromJson(){
-    let jsonData = await fetch("/data/images.json");
+    let jsonData = await fetch("/test/data/images.json");
     let data = await jsonData.json();
     return data;
 }
