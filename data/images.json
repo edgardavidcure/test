@@ -1,181 +1,181 @@
 {
     "automotive":[
         {
-            "path": "/test/images/cars1.jpeg"
+            "path": "/images/cars1.jpeg"
         },
         {
-            "path": "/test/images/cars2.jpeg"
+            "path": "/images/cars2.jpeg"
         },
         {
-            "path": "/test/images/cars3.jpeg"
+            "path": "/images/cars3.jpeg"
         },
         {
-            "path": "/test/images/cars4.jpg"
+            "path": "/images/cars4.jpg"
         },
         {
-            "path": "/test/images/cars5.jpg"
+            "path": "/images/cars5.jpg"
         },
         {
-            "path": "/test/images/cars6.jpg"
+            "path": "/images/cars6.jpg"
         },
         {
-            "path": "/test/images/cars7.jpg"
+            "path": "/images/cars7.jpg"
         },
         {
-            "path": "/test/images/cars8.jpg"
+            "path": "/images/cars8.jpg"
         },
         {
-            "path": "/test/images/cars9.jpg"
+            "path": "/images/cars9.jpg"
         },
         {
-            "path": "/test/images/cars10.jpg"
+            "path": "/images/cars10.jpg"
         },
         {
-            "path": "/test/images/cars11.jpg"
+            "path": "/images/cars11.jpg"
         },
         {
-            "path": "/test/images/cars12.jpg"
+            "path": "/images/cars12.jpg"
         },
         {
-            "path": "/test/images/cars13.jpg"
+            "path": "/images/cars13.jpg"
         },
         {
-            "path": "/test/images/cars14.jpg"
+            "path": "/images/cars14.jpg"
         },
         {
-            "path": "/test/images/cars15.jpg"
+            "path": "/images/cars15.jpg"
         },
         {
-            "path": "/test/images/cars16.jpg"
+            "path": "/images/cars16.jpg"
         },
         {
-            "path": "/test/images/cars17.jpg"
+            "path": "/images/cars17.jpg"
         },
         {
-            "path": "/test/images/cars18.jpg"
+            "path": "/images/cars18.jpg"
         },
         {
-            "path": "/test/images/moto1.jpg"
+            "path": "/images/moto1.jpg"
         },
         {
-            "path": "/test/images/moto2.jpg"
+            "path": "/images/moto2.jpg"
         },
         {
-            "path": "/test/images/moto3.jpg"
+            "path": "/images/moto3.jpg"
         },
         {
-            "path": "/test/images/moto4.jpg"
+            "path": "/images/moto4.jpg"
         },
         {
-            "path": "/test/images/moto5.jpg"
+            "path": "/images/moto5.jpg"
         },
         {
-            "path": "/test/images/moto6.jpg"
+            "path": "/images/moto6.jpg"
         },
         {
-            "path": "/test/images/moto7.jpg"
+            "path": "/images/moto7.jpg"
         },
         {
-            "path": "/test/images/moto8.jpg"
+            "path": "/images/moto8.jpg"
         },
         {
-            "path": "/test/images/moto9.jpg"
+            "path": "/images/moto9.jpg"
         },
         {
-            "path": "/test/images/moto10.jpg"
+            "path": "/images/moto10.jpg"
         }
     ],
 
     "portraits":[
         {
-            "path": "/test/images/portrait1.jpeg"
+            "path": "/images/portrait1.jpeg"
         },
         {
-            "path": "/test/images/portrait2.jpeg"
+            "path": "/images/portrait2.jpeg"
         },
         {
-            "path": "/test/images/portrait3.jpeg"
+            "path": "/images/portrait3.jpeg"
         },
         {
-            "path": "/test/images/portrait4.jpeg"
+            "path": "/images/portrait4.jpeg"
         },
         {
-            "path": "/test/images/portrait5.jpeg"
+            "path": "/images/portrait5.jpeg"
         },
         {
-            "path": "/test/images/portrait6.jpeg"
+            "path": "/images/portrait6.jpeg"
         },
         {
-            "path": "/test/images/portrait7.jpeg"
+            "path": "/images/portrait7.jpeg"
         },
         {
-            "path": "/test/images/portrait9.jpg"
+            "path": "/images/portrait9.jpg"
         }
         ,
         {
-            "path": "/test/images/portrait10.jpg"
+            "path": "/images/portrait10.jpg"
         },
         {
-            "path": "/test/images/portrait12.jpg"
+            "path": "/images/portrait12.jpg"
         },
         {
-            "path": "/test/images/portrait13.jpg"
+            "path": "/images/portrait13.jpg"
         },
         {
-            "path": "/test/images/portrait14.jpg"
+            "path": "/images/portrait14.jpg"
         },
         {
-            "path": "/test/images/portrait15.jpg"
+            "path": "/images/portrait15.jpg"
         },
         {
-            "path": "/test/images/portrait16.jpg"
+            "path": "/images/portrait16.jpg"
         },
         {
-            "path": "/test/images/portrait17.jpg"
+            "path": "/images/portrait17.jpg"
         },
         {
-            "path": "/test/images/portrait18.jpg"
+            "path": "/images/portrait18.jpg"
         },
         {
-            "path": "/test/images/portrait19.jpg"
+            "path": "/images/portrait19.jpg"
         },
         {
-            "path": "/test/images/portrait20.jpg"
+            "path": "/images/portrait20.jpg"
         },
         {
-            "path": "/test/images/portrait21.jpg"
+            "path": "/images/portrait21.jpg"
         },
         {
-            "path": "/test/images/portrait22.jpg"
+            "path": "/images/portrait22.jpg"
         },
         {
-            "path": "/test/images/portrait23.jpg"
+            "path": "/images/portrait23.jpg"
         }
     ],
     "landscapes":[
         {
-            "path": "/test/images/landscape1.jpeg"
+            "path": "/images/landscape1.jpeg"
         },
         {
-            "path": "/test/images/landscape2.jpg"
+            "path": "/images/landscape2.jpg"
         },
         {
-            "path": "/test/images/landscape3.jpg"
+            "path": "/images/landscape3.jpg"
         },
         {
-            "path": "/test/images/landscape4.jpg"
+            "path": "/images/landscape4.jpg"
         },
         {
-            "path": "/test/images/landscape5.jpg"
+            "path": "/images/landscape5.jpg"
         },
         {
-            "path": "/test/images/landscape6.jpg"
+            "path": "/images/landscape6.jpg"
         },
         {
-            "path": "/test/images/landscape7.jpg"
+            "path": "/images/landscape7.jpg"
         },
         {
-            "path": "/test/images/landscape8.jpg"
+            "path": "/images/landscape8.jpg"
         }
     ]
 
