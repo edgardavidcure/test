@@ -1,7 +1,7 @@
 {
   "name": "mcbridestudios",
   "version": "1.0.0",
-  "main": "main.js",
+  "main": "app.js",
   "scripts": {
     "start": "vite",
     "build": "vite build --emptyOutDir",
