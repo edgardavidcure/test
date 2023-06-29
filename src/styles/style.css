@@ -1,26 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit&family=Manrope:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&family=Ysabeau+SC:wght@600&display=swap');
 *{
     margin: 0
 }
 
-a, h1, h2, p{
-  font-family: "Kanit";
+h1, h2{
+  font-family: "Ysabeau SC";
+  font-size: 3.5rem;
 }
 
-main{
+p{
+  font-family: "montserrat";
+  font-size: 1.5rem;
+}
+a{
+  font-family: "Ysabeau SC";
+
+}
+/* main{
     background-color: black;
     display: flex;
     flex-direction: column;
-}
-main > div{
+} */
+/* main > div{
   height: 20vw;
-}
+} */
 
-header{
+/* header{
     position: relative;
     grid-row: 1;
-}
-#contact{
+} */
+/* #contact{
     background-color: transparent;
     height: 100%;
     margin: 0; 
@@ -33,22 +42,22 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-#personalInfo{
+} */
+/* #personalInfo{
   display: flex;
   flex-direction: column;
   padding-left: 20px;
-}
+} */
 
-#personalInfo h1, #personalInfo p{
+/* #personalInfo h1, #personalInfo p{
   color: white;
   height: 100%;
 }
 .social{
   padding-right: 20px;
-}
+} */
 
-.social img{
+/* .social img{
     height: 60px;
     width: 60px;
     filter: brightness(8);
@@ -61,11 +70,11 @@ header{
     
     
     transition: filter 1s ease;
-}
+} */
 
 
 
-main div ul li{
+/* main div ul li{
     color: white;
     list-style: none;
     font-family: "Kanit";
@@ -74,32 +83,112 @@ main div ul li{
 }
 main div ul li:hover{
     color: rgba(182, 182, 182, 0.9);
-}
-
+} */
+/* 
 main div ul{
     display: flex;
     justify-content: space-around;
+} */
+
+nav{
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+
 }
 
+nav ul{
+  position: fixed;
 
+  display: flex;
+  justify-content: space-around;
+  padding: unset;
+  width: 100%;
 
+}
 
+nav ul li{
+  list-style: none;
+  padding-top: 3rem;
+}
+
+ul li a{
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100vh;
+  position: relative;
+}
+
+.hero-content {
+  text-align: center;
+  color: #fff;
+  background-color: black;
+  width: 100%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+.floating-button {
+  position: absolute;
+  bottom: 20px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: #565656;
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  animation: bounce 1s infinite;
+  transition: background-color 0.5s ease;
+
+}
+
+.floating-button:hover {
+  background-color: #838383;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 
 .blackBckg{
     background-color: black;
     width: 100%;
-    height: 100%;
-    position: relative;
+    height: 60%;
     overflow: visible;
     display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 
 .circle{
     border-radius: 50%;
     border: 5px solid white;
-    height: 95%;
-    width: 200px;
+    height: 35vh;
+    width: 35vh;
     color: transparent;
     opacity: 0;
     margin: auto;
@@ -107,21 +196,24 @@ main div ul{
 }
 .first{
     position: absolute;
-    left: -50vw;
+    left: -10vw;
 }
 .last{
     position: absolute;
-    right: -50vw;
+    right: -10vw;
 }
 .fixed{
-    border: 8px solid white;
     margin: auto;
     opacity: 0;
+    animation: bounce 2s infinite;
+    overflow: hidden;
+    border: 8px solid white;
 }
 
 .fixed img{
     width: 100%;
     opacity: 0;
+    overflow: hidden;
 }
 
 
@@ -135,8 +227,11 @@ main div ul{
 .transition3{
     transition: opacity 0.5s ease-in, border-bottom 0.5s ease-in-out;
     opacity: 0;
-    
+}
 
+.transition4{
+  transition: opacity 0.5s ease-in, border-bottom 0.5s ease-in-out;
+  opacity: 0;
 }
   
 .first.move {
@@ -151,8 +246,9 @@ main div ul{
 
 }
 
-.imageContainer {
-    height: 100%; /* Adjust the height as per your requirements */
+
+/* .imageContainer {
+    height: 100%; 
     display: flex;
     background-color: black;
     padding-top: 10rem;
@@ -168,8 +264,8 @@ main div ul{
     max-width: 100%;
     opacity: 0;
     margin: 0 auto;
-  }
-  
+  } */
+/*   
   .align-image {
     transition: margin-top 0.5s ease, filter 1s ease, opacity 5s ease;
     margin-top: 0;
@@ -186,26 +282,26 @@ main div ul{
     filter: grayscale(0);
     transition: filter 1s ease;
   }
-  
+   */
  
   
  
 
-
+/* 
 
   .imageContainer:after {
     content: "";
     display: table;
     clear: both;
-  }
+  } */
   
   /* Create four equal columns that floats next to eachother */
-  .column {
+  /* .column {
     float: left;
-  }
+  } */
   
   /* The Modal (background) */
-  .modal {
+  /* .modal {
     display: none;
     position: fixed;
     z-index: 3;
@@ -216,10 +312,10 @@ main div ul{
     height: 100%;
     overflow: auto;
     background-color: black;
-  }
+  } */
   
   /* Modal Content */
-  .modal-content {
+  /* .modal-content {
     position: relative;
     background-color: #fefefe;
     margin: auto;
@@ -228,26 +324,26 @@ main div ul{
     max-width: 1200px;
     height: 100%;
   }
-  
+   */
   /* The Close Button */
-  .close {
+  /* .close {
     color: white;
     position: absolute;
     top: 10px;
     right: 25px;
     font-size: 35px;
     font-weight: bold;
-  }
+  } */
   
-  .close:hover,
+  /* .close:hover,
   .close:focus {
     color: #999;
     text-decoration: none;
     cursor: pointer;
-  }
+  } */
   
   /* Hide the slides by default */
-  .mySlides {
+  /* .mySlides {
     display: none;
     height: 100%;
     justify-content: center;
@@ -258,10 +354,10 @@ main div ul{
     height: 100%;
     width: auto;
   }
-  
+   */
 
 
-  .prev, .next{
+  /* .prev, .next{
     cursor: pointer;
     position: absolute;
     width: auto;
@@ -277,16 +373,16 @@ main div ul{
     background-color: rgba(0, 0, 0, 0.5);
     
 
-  }
+  } */
   /* Next & previous buttons */
-  .imageContainer .prev,
+  /* .imageContainer .prev,
   .imageContainer .next {
     
     opacity: 0;
     z-index: 1;
-  }
+  } */
 
- .imageContainer::-webkit-scrollbar {
+ /* .imageContainer::-webkit-scrollbar {
     display: none;
   }
   
@@ -300,19 +396,19 @@ main div ul{
 
   .prev{
     left: 0;
-  }
+  } */
   /* Position the "next button" to the right */
-  .next {
+  /* .next {
     right: 0;
     border-radius: 3px 0 0 3px;
   }
-  
+   */
   /* On hover, add a black background color with a little bit see-through */
-  .prev:hover,
+  /* .prev:hover,
   .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
-  }
-
+  } */
+/* 
   .portraitNext, .portraitPrev{
     top: 700px;
   }
@@ -331,4 +427,4 @@ main div ul{
   
   .hover-shadow:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  }
+  } */
