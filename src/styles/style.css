@@ -16,20 +16,20 @@ a{
   font-family: "Ysabeau SC";
 
 }
-/* main{
+.portfolioPage{
     background-color: black;
     display: flex;
     flex-direction: column;
-} */
-/* main > div{
+} 
+.portfolioPage > div{
   height: 20vw;
-} */
+} 
 
-/* header{
+.portfolioPage header{
     position: relative;
     grid-row: 1;
-} */
-/* #contact{
+} 
+#contact{
     background-color: transparent;
     height: 100%;
     margin: 0; 
@@ -42,22 +42,23 @@ a{
     display: flex;
     justify-content: space-between;
     align-items: center;
-} */
-/* #personalInfo{
+    height: 5rem;
+} 
+#personalInfo{
   display: flex;
   flex-direction: column;
   padding-left: 20px;
-} */
+} 
 
-/* #personalInfo h1, #personalInfo p{
+#personalInfo h1, #personalInfo p{
   color: white;
   height: 100%;
 }
 .social{
   padding-right: 20px;
-} */
+} 
 
-/* .social img{
+.social img{
     height: 60px;
     width: 60px;
     filter: brightness(8);
@@ -70,37 +71,35 @@ a{
     
     
     transition: filter 1s ease;
-} */
+} 
 
 
 
-/* main div ul li{
+.portfolioPage div ul li{
     color: white;
     list-style: none;
     font-family: "Kanit";
     font-size: 2rem;
     cursor: pointer;
 }
-main div ul li:hover{
+.portfolioPage ul li:hover{
     color: rgba(182, 182, 182, 0.9);
-} */
-/* 
-main div ul{
+} 
+.portfolioPage div ul{
     display: flex;
     justify-content: space-around;
-} */
+} 
 
 nav{
   position: relative;
   top: 0;
   left: 0;
   z-index: 1;
-
-
+  opacity: 0;
 }
 
 nav ul{
-  position: fixed;
+  position: absolute;
 
   display: flex;
   justify-content: space-around;
@@ -111,7 +110,7 @@ nav ul{
 
 nav ul li{
   list-style: none;
-  padding-top: 3rem;
+  padding: 3rem 0;
 }
 
 ul li a{
@@ -152,14 +151,18 @@ ul li a{
   justify-content: center;
   align-items: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+
+}
+.scroll-button{
   animation: bounce 1s infinite;
-  transition: background-color 0.5s ease;
 
 }
 
 .floating-button:hover {
   background-color: #838383;
 }
+
 
 @keyframes bounce {
   0% {
@@ -220,10 +223,10 @@ ul li a{
 }
 
 
-.transition1 {
+.firstCircleTransition {
     transition:  opacity 2s ease-in-out, border 2s ease, left 3s ease-in-out;
 }
-.transition2 {
+.secondCircleTransition {
     transition:  opacity 2s ease-in-out, border 2s ease, right 3s ease-in-out;
 }
 
@@ -235,6 +238,11 @@ ul li a{
 .transition4{
   transition: opacity 0.5s ease-in, border-bottom 0.5s ease-in-out;
   opacity: 0;
+}
+
+.transition5{
+    transition: opacity 0.5s ease-in, border-bottom 0.5s ease-in-out, background-color 0.5s ease;
+
 }
   
 .first.move {
@@ -248,9 +256,165 @@ ul li a{
     border: 8px solid white;
 
 }
+#portfolio{
+  display: flex;
+  flex-direction: column;
+  /* background-color: black; */
+}
+#portfolio h1{
+  /* color: #fff; */
+}
+#portraits, #automotive, #landscapes{
+  min-height: 600px;
+  height: 50vh;
+  display: flex;
+  margin: 0 20%;
+  align-items: center;
+}
+#automotive{
+  flex-direction: row-reverse;
+}
+#automotive .automotiveContainer{
+  left: 0;
+}
+#portfolio img{
+  width: auto;
+  max-height: 450px;
+  top: -200px;
+  position: absolute;
+  border-radius: 10px;
+  
+}
+.automotiveContainer, .portraitContainer, .landscapesContainer{
+  margin: 0 auto;
+  position: relative;
+}
+
+#automotive .imageStack:nth-child(1){
+  transform: translateX(-500px) rotate(-10deg);
 
 
-/* .imageContainer {
+}
+#automotive .imageStack:nth-child(2){
+  transform: translateX(-300px) rotate(0deg);
+
+
+
+}
+#automotive .imageStack:nth-child(3){
+  transform: translateX(-120px) rotate(10deg);
+
+}
+
+
+
+
+#automotive .imageStack:nth-child(1):hover{
+  transform: translateX(-520px) rotate(-15deg);
+
+
+
+}
+#automotive .imageStack:nth-child(2):hover{
+  transform: translateX(-290px) rotate(2deg);
+
+
+
+}
+#automotive .imageStack:nth-child(3):hover{
+  transform: translateX(-80px) rotate(15deg);
+
+}
+
+/*  */
+
+#portraits .imageStack:nth-child(1){
+  transform: translateX(-180px) rotate(-10deg);
+
+
+}
+#portraits .imageStack:nth-child(2){
+  transform: translateX(0px) rotate(0deg);
+
+
+
+}
+#portraits .imageStack:nth-child(3){
+  transform: translateX(170px) rotate(10deg);
+
+}
+
+
+
+
+#portraits .imageStack:nth-child(1):hover{
+  transform: translateX(-200px) rotate(-15deg);
+
+
+
+}
+#portraits .imageStack:nth-child(2):hover{
+  transform: translateX(10px) rotate(2deg);
+
+
+
+}
+#portraits .imageStack:nth-child(3):hover{
+  transform: translateX(210px) rotate(15deg);
+
+}
+
+/* 
+ */
+
+
+
+ #landscapes .imageStack:nth-child(1){
+  transform: translateX(-180px) rotate(-10deg);
+
+
+}
+#landscapes .imageStack:nth-child(2){
+  transform: translateX(0px) rotate(0deg);
+
+
+
+}
+#landscapes .imageStack:nth-child(3){
+  transform: translateX(170px) rotate(10deg);
+
+}
+
+
+
+
+#landscapes .imageStack:nth-child(1):hover{
+  transform: translateX(-200px) rotate(-15deg);
+
+
+
+}
+#landscapes .imageStack:nth-child(2):hover{
+  transform: translateX(10px) rotate(2deg);
+
+
+
+}
+#landscapes .imageStack:nth-child(3):hover{
+  transform: translateX(210px) rotate(15deg);
+}
+.imageStack{
+  filter: grayscale(1);
+  transition: transform 1s ease, filter 1s ease;
+  cursor: pointer;
+}
+.imageStack:hover{
+  filter: grayscale(0);
+}
+
+
+
+.portfolioPage .imageContainer {
     height: 100%; 
     display: flex;
     background-color: black;
@@ -262,13 +426,8 @@ ul li a{
     scroll-behavior: smooth;
   }
   
-  #randomPortrait, #randomAutomotive, #randomLandscape{
-    max-height: 50vw;
-    max-width: 100%;
-    opacity: 0;
-    margin: 0 auto;
-  } */
-/*   
+
+  
   .align-image {
     transition: margin-top 0.5s ease, filter 1s ease, opacity 5s ease;
     margin-top: 0;
@@ -285,26 +444,22 @@ ul li a{
     filter: grayscale(0);
     transition: filter 1s ease;
   }
-   */
+  
  
   
  
 
-/* 
 
-  .imageContainer:after {
+
+.portfolioPage .imageContainer:after {
     content: "";
     display: table;
     clear: both;
-  } */
+  } 
   
-  /* Create four equal columns that floats next to eachother */
-  /* .column {
-    float: left;
-  } */
-  
-  /* The Modal (background) */
-  /* .modal {
+ 
+ 
+ .modal {
     display: none;
     position: fixed;
     z-index: 3;
@@ -315,7 +470,7 @@ ul li a{
     height: 100%;
     overflow: auto;
     background-color: black;
-  } */
+  } 
   
   /* Modal Content */
   /* .modal-content {
@@ -360,7 +515,7 @@ ul li a{
    */
 
 
-  /* .prev, .next{
+  .prev, .next{
     cursor: pointer;
     position: absolute;
     width: auto;
@@ -376,16 +531,15 @@ ul li a{
     background-color: rgba(0, 0, 0, 0.5);
     
 
-  } */
-  /* Next & previous buttons */
-  /* .imageContainer .prev,
+  } 
+  .imageContainer .prev,
   .imageContainer .next {
     
     opacity: 0;
     z-index: 1;
-  } */
+  } 
 
- /* .imageContainer::-webkit-scrollbar {
+ .imageContainer::-webkit-scrollbar {
     display: none;
   }
   
@@ -399,19 +553,17 @@ ul li a{
 
   .prev{
     left: 0;
-  } */
-  /* Position the "next button" to the right */
-  /* .next {
+  } 
+ .next {
     right: 0;
     border-radius: 3px 0 0 3px;
   }
-   */
-  /* On hover, add a black background color with a little bit see-through */
-  /* .prev:hover,
+  
+  .prev:hover,
   .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
-  } */
-/* 
+  } 
+
   .portraitNext, .portraitPrev{
     top: 700px;
   }
@@ -430,4 +582,8 @@ ul li a{
   
   .hover-shadow:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  } */
+  } 
+
+  .portfolioPage h1{
+    color: white;
+  }

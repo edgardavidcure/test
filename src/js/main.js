@@ -1,5 +1,6 @@
-import { centerItem } from "./utils.mjs";
-
+import { centerItem, getDataFromJson} from "./utils.mjs";
+const transitionElement = document.querySelector('.transition3');
+const lastTypeEffect = document.querySelector(".typewriter-h1")
 const circles = document.querySelectorAll(".circle");
 
 window.onload = function addClass(){
@@ -10,6 +11,60 @@ window.onload = function addClass(){
 
 window.addEventListener('load', centerItem);
 
+
+function aftertypeeffect(){ setTimeout(() => {
+  const headerLinks = document.querySelectorAll(".transition4");
+  for (let item of headerLinks){
+      item.style.opacity = "1"
+  }
+}, 4100);
+}
+
+
+function headerLinksTransition(){ setTimeout(() => {
+  const headerLinks = document.querySelectorAll(".transition5");
+  const scrollButton = document.querySelector(".floating-button")
+  for (let item of headerLinks){
+      item.style.opacity = "1"
+  }
+  setTimeout(() => {
+    scrollButton.classList.add("scroll-button")
+    
+  }, 1000);
+  }, 8500);
+}
+
+async function getLandingImages(){
+  const data = await getDataFromJson();
+  const[landingImages] = data.landing;
+  return landingImages;
+  
+}
+
+async function displayLandingImages(){
+  const images = await getLandingImages();
+  const automotiveImages = images.automotive
+  const portraitImages = images.portraits 
+  const landscapeImages = images.landscapes 
+  const automotiveContainer = document.querySelector(".automotiveContainer")
+  const portraitContainer = document.querySelector(".portraitContainer")
+  const landscapesContainer = document.querySelector(".landscapesContainer")
+  createImageElements(automotiveImages, automotiveContainer)
+  createImageElements(portraitImages, portraitContainer)
+  createImageElements(landscapeImages, landscapesContainer)
+
+
+}
+displayLandingImages()
+
+function createImageElements(imageType, element){
+  
+  
+  imageType.forEach( image => {
+    const imageElement = `<img src="${image.path}" alt="Photo taken by Terry Mcbride" class="imageStack">`
+    element.insertAdjacentHTML("beforeend", imageElement)
+  });
+}
 
 setTimeout(() => {
     const firstCircle = document.querySelector(".first");
@@ -26,21 +81,14 @@ setTimeout(() => {
 
 
 setTimeout(() => {
-    const headerLinks = document.querySelectorAll(".transition3");
-    for (let item of headerLinks){
+    const links = document.querySelectorAll(".transition3");
+    for (let item of links){
         item.style.opacity = "1"
     }
 }, 3300);
 
 
-function aftertypeeffect(){setTimeout(() => {
-    const headerLinks = document.querySelectorAll(".transition4");
-    for (let item of headerLinks){
-        item.style.opacity = "1"
-    }
-}, 800);
-}
-const transitionElement = document.querySelector('.transition3');
+
 transitionElement.addEventListener('transitionend', function() {
     const typedHeader = new Typed('.typewriter-h1', {
         strings: ['Light and Shadows'],
@@ -60,14 +108,24 @@ transitionElement.addEventListener('transitionend', function() {
       });
 });
 
-  document.addEventListener('DOMContentLoaded', function() {
-    const scrollButton = document.querySelector('.scroll-button');
-  
-    scrollButton.addEventListener('click', function(event) {
-      event.preventDefault();
-  
-      const portfolioSection = document.querySelector('#portfolio');
-      portfolioSection.scrollIntoView({ behavior: 'smooth' });
-    });
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const scrollButton = document.querySelector('.floating-button');
+
+  scrollButton.addEventListener('click', function(event) {
+    event.preventDefault();
+
+    const portfolioSection = document.querySelector('#portfolio');
+    portfolioSection.scrollIntoView({ behavior: 'smooth' });
+    
   });
 
+  headerLinksTransition()
+
+});
+
+
+getLandingImages()
