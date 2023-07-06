@@ -191,6 +191,20 @@ ul li a{
 
 }
 
+.portfolioPage .circle{
+  opacity: 1;
+  height: 25vh;
+  width: 25vh;
+  max-width: 200px;
+  max-height: 200px;
+}
+.portfolioPage .circle img{
+  opacity: 1;
+}
+.portfolioPage nav{
+  opacity: 0;
+}
+
 .circle{
     border-radius: 50%;
     border: 5px solid white;
@@ -261,8 +275,11 @@ ul li a{
   flex-direction: column;
   /* background-color: black; */
 }
-#portfolio h1{
-  /* color: #fff; */
+.portfolioPage main{
+  margin: 15rem 2rem 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 15rem;
 }
 #portraits, #automotive, #landscapes{
   min-height: 600px;
@@ -271,6 +288,44 @@ ul li a{
   margin: 0 20%;
   align-items: center;
 }
+.portfolioPage #portraits, .portfolioPage #automotive, .portfolioPage #landscapes{
+  margin: unset;
+  flex-direction: unset;
+  align-items: unset;
+  overflow-y: hidden;
+  min-height: unset;
+  height: 100%;
+
+}
+
+#portraitsContainer, #automotiveContainer, #landscapesContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
+  position: relative;
+}
+
+.portfolioPage .column{
+  height: 100%;
+}
+
+.portfolioPage .column img{
+  max-height: 50vh;
+  min-height: 500px;
+}
+
+.portfolioPage .imageContainer {
+  height: 100%; 
+  display: flex;
+  background-color: black;
+  min-width: 100%;
+  width: 100%;
+  overflow-x: scroll;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+}
+
 #automotive{
   flex-direction: row-reverse;
 }
@@ -414,18 +469,7 @@ ul li a{
 
 
 
-.portfolioPage .imageContainer {
-    height: 100%; 
-    display: flex;
-    background-color: black;
-    padding-top: 10rem;
-    min-width: 100%;
-    width: 100%;
-    overflow-x: scroll;
-    white-space: nowrap;
-    scroll-behavior: smooth;
-  }
-  
+
 
   
   .align-image {
@@ -472,36 +516,38 @@ ul li a{
     background-color: black;
   } 
   
-  /* Modal Content */
-  /* .modal-content {
+ .modal-content {
     position: relative;
-    background-color: #fefefe;
+    background-color: transparent;
     margin: auto;
     padding: 0;
     width: 90%;
     max-width: 1200px;
     height: 100%;
   }
-   */
-  /* The Close Button */
-  /* .close {
+
+  .modal-content div{
+    height: 100%;
+    background-color: transparent;
+    display: none;
+  }
+  .close {
     color: white;
     position: absolute;
     top: 10px;
     right: 25px;
     font-size: 35px;
     font-weight: bold;
-  } */
+  } 
   
-  /* .close:hover,
+ .close:hover,
   .close:focus {
     color: #999;
     text-decoration: none;
     cursor: pointer;
-  } */
+  } 
   
-  /* Hide the slides by default */
-  /* .mySlides {
+.mySlides {
     display: none;
     height: 100%;
     justify-content: center;
@@ -512,7 +558,7 @@ ul li a{
     height: 100%;
     width: auto;
   }
-   */
+   
 
 
   .prev, .next{
@@ -551,11 +597,11 @@ ul li a{
     
   }
 
-  .prev{
-    left: 0;
+.prev{
+    left: 0px;
   } 
  .next {
-    right: 0;
+    right: -8px;
     border-radius: 3px 0 0 3px;
   }
   
@@ -565,15 +611,15 @@ ul li a{
   } 
 
   .portraitNext, .portraitPrev{
-    top: 700px;
+    top: 60%;
   }
 
   .automotiveNext, .automotivePrev{
-    top: 1600px;
+    top: 60%;
 
   }
   .landscapesNext, .landscapesPrev{
-    top: 2400px;
+    top: 60%;
 
   }
   img.hover-shadow {
@@ -586,4 +632,6 @@ ul li a{
 
   .portfolioPage h1{
     color: white;
+    font-size: 2rem;
+    text-align: center;
   }
