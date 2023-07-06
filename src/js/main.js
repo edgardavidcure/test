@@ -9,7 +9,6 @@ window.onload = function addClass(){
     }
 }
 
-window.addEventListener('load', centerItem);
 
 
 function aftertypeeffect(){ setTimeout(() => {
@@ -66,6 +65,26 @@ function createImageElements(imageType, element){
   });
 }
 
+function loadTypedText(){
+  setTimeout(() => {
+      const typedHeader = new Typed('.typewriter-h1', {
+          strings: ['Light and Shadows'],
+          typeSpeed: 70,
+          showCursor: false,
+          onComplete: function() {
+            const typedParag = new Typed('.typewriter-p', {
+              strings: ['A Gallery By Terry McBride'],
+              typeSpeed: 50,
+              showCursor: false,
+              onComplete: function(){
+                  aftertypeeffect()
+  
+              }
+            });
+          }
+        });
+  }, 4000);
+}  
 setTimeout(() => {
     const firstCircle = document.querySelector(".first");
     const secondCircle =  document.querySelector(".last");
@@ -89,24 +108,7 @@ setTimeout(() => {
 
 
 
-transitionElement.addEventListener('transitionend', function() {
-    const typedHeader = new Typed('.typewriter-h1', {
-        strings: ['Light and Shadows'],
-        typeSpeed: 70,
-        showCursor: false,
-        onComplete: function() {
-          const typedParag = new Typed('.typewriter-p', {
-            strings: ['A Gallery By Terry McBride'],
-            typeSpeed: 50,
-            showCursor: false,
-            onComplete: function(){
-                aftertypeeffect()
 
-            }
-          });
-        }
-      });
-});
 
 
 
@@ -124,6 +126,13 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   headerLinksTransition()
+  window.addEventListener('load', centerItem);
+  loadTypedText()
+
+
+
+
+
 
 });
 
