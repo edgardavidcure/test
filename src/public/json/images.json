@@ -177,6 +177,43 @@
         {
             "path": "/images/landscape8.jpg"
         }
+    ],
+    "landing":[
+        {
+            "automotive":[
+                {
+                    "path": "/images/cars18.jpg"
+                },
+                {
+                    "path": "/images/cars3.jpeg"
+                },
+                {
+                    "path": "/images/moto2.jpg"
+                }
+            ], 
+            "landscapes":[
+                {
+                    "path": "/images/landscape8.jpg"
+                },
+                {
+                    "path": "/images/landscape2.jpg"
+                },
+                {
+                    "path": "/images/landscape7.jpg"
+                }
+            ],
+            "portraits":[
+                {
+                    "path": "/images/portrait12.jpg"
+                },
+                {
+                    "path": "/images/portrait17.jpg"
+                },
+                {
+                    "path": "/images/portrait22.jpg"
+                }
+            ]
+        }
     ]
 
 

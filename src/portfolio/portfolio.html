@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="../styles/style.css">
     <title>Home | Terry McBride Photography</title>
 </head>
 <body>
@@ -16,19 +16,19 @@
                 </h1>
                 <p>Tdmcbride15@yahoo.com</p>
             </div>
-            <a class="headerLinks social transition3" href=""><img src="images/instagram.png" alt=""></a>
+            <a class="headerLinks social transition3" href=""><img src="../images/instagram.png" alt=""></a>
         </div>
         <div class="blackBckg">
             <div class="circle first transition1"></div>
             <div class="circle last transition2"></div>
             <div class="circle fixed transition3">
-                <img class="transition3" src="images/logo.png" alt="Logo">
+                <img class="transition3" src="../images/logo.png" alt="Logo">
             </div>
         </div>
     </header>
     
-    <main>
-        <h1 onclick="getImages('portraits')">Portraits</h1>
+    <main class="portfolioPage">
+        <h1>Portraits</h1>
 
         <div id="portraits" class="imageContainer transition3">
             <!-- Next/previous controls -->
@@ -36,7 +36,7 @@
             <a class="next transition3 portraitNext" onclick="plusGallery('+', '#portraits')">&#10095;</a>
         
         </div>
-        <h1 onclick="getImages('automotive')">Automotive</h1>
+        <h1>Automotive</h1>
 
         <div id="automotive" class="imageContainer transition3">
             <!-- Next/previous controls -->
@@ -44,7 +44,7 @@
             <a class="next transition3 automotiveNext" onclick="plusGallery('+', '#automotive')">&#10095;</a>
         
         </div>
-        <h1 onclick="getImages('landscapes')">Landscapes</h1>
+        <h1>Landscapes</h1>
 
         <div id="landscapes" class="imageContainer transition3">
             <!-- Next/previous controls -->
@@ -84,6 +84,6 @@
     <footer>
 
     </footer>
-    <script src="js/index.js" type="module"></script>
+    <script src="../js/portfolio.js" type="module"></script>
 </body>
 </html>
