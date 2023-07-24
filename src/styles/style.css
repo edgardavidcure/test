@@ -30,19 +30,14 @@ a{
     grid-row: 1;
 } 
 #contact{
-    background-color: transparent;
-    height: 100%;
+    background-color: black;
     margin: 0; 
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 0;
     width: 100%;
-    z-index: 2;
     display: flex;
     justify-content: space-between;
+    flex-flow: row-reverse;
     align-items: center;
-    height: 5rem;
+    height: 100%;
 } 
 #personalInfo{
   display: flex;
@@ -273,6 +268,8 @@ ul li a{
 #portfolio{
   display: flex;
   flex-direction: column;
+  gap: 5rem;
+  margin: 5rem 0;
   /* background-color: black; */
 }
 .portfolioPage main{
@@ -285,8 +282,10 @@ ul li a{
   min-height: 600px;
   height: 50vh;
   display: flex;
-  margin: 0 20%;
+  margin: 0;
   align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 .portfolioPage #portraits, .portfolioPage #automotive, .portfolioPage #landscapes{
   margin: unset;
@@ -295,6 +294,8 @@ ul li a{
   overflow-y: hidden;
   min-height: unset;
   height: 100%;
+  justify-content: unset;
+  flex-wrap: nowrap;
 
 }
 
@@ -304,6 +305,7 @@ ul li a{
   justify-content: center;
   gap: 3rem;
   position: relative;
+  left: 0;
 }
 
 .portfolioPage .column{
@@ -334,30 +336,37 @@ ul li a{
 }
 #portfolio img{
   width: auto;
+  height: 60vh;
   max-height: 450px;
-  top: -200px;
-  position: absolute;
+  top: 0px;
+  /* position: absolute; */
   border-radius: 10px;
+  left: 0;
+  z-index: 0;
   
 }
 .automotiveContainer, .portraitContainer, .landscapesContainer{
   margin: 0 auto;
-  position: relative;
+  /* position: relative; */
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
 #automotive .imageStack:nth-child(1){
-  transform: translateX(-500px) rotate(-10deg);
+  transform: translateX(120px) rotate(-10deg);
 
 
 }
 #automotive .imageStack:nth-child(2){
-  transform: translateX(-300px) rotate(0deg);
-
-
-
+  transform: translateX(-10px) rotate(0deg);
 }
+
 #automotive .imageStack:nth-child(3){
-  transform: translateX(-120px) rotate(10deg);
+  transform: translateX(-150px) rotate(10deg);
 
 }
 
@@ -365,26 +374,28 @@ ul li a{
 
 
 #automotive .imageStack:nth-child(1):hover{
-  transform: translateX(-520px) rotate(-15deg);
-
+  transform: translateX(120px) rotate(-15deg);
+  
 
 
 }
 #automotive .imageStack:nth-child(2):hover{
-  transform: translateX(-290px) rotate(2deg);
+  transform: translateX(-10px) rotate(2deg);
+  z-index: 1;
 
 
 
 }
 #automotive .imageStack:nth-child(3):hover{
-  transform: translateX(-80px) rotate(15deg);
+  transform: translateX(-150px) rotate(15deg);
+  z-index: 1;
 
 }
 
 /*  */
 
 #portraits .imageStack:nth-child(1){
-  transform: translateX(-180px) rotate(-10deg);
+  transform: translateX(170px) rotate(-10deg);
 
 
 }
@@ -395,7 +406,7 @@ ul li a{
 
 }
 #portraits .imageStack:nth-child(3){
-  transform: translateX(170px) rotate(10deg);
+  transform: translateX(-160px) rotate(10deg);
 
 }
 
@@ -403,19 +414,20 @@ ul li a{
 
 
 #portraits .imageStack:nth-child(1):hover{
-  transform: translateX(-200px) rotate(-15deg);
-
+  transform: translateX(170px) rotate(-15deg);
 
 
 }
 #portraits .imageStack:nth-child(2):hover{
-  transform: translateX(10px) rotate(2deg);
+  transform: translateX(0px) rotate(2deg);
+  z-index: 1;
 
 
 
 }
 #portraits .imageStack:nth-child(3):hover{
-  transform: translateX(210px) rotate(15deg);
+  transform: translateX(-160px) rotate(15deg);
+  z-index: 1;
 
 }
 
@@ -425,7 +437,7 @@ ul li a{
 
 
  #landscapes .imageStack:nth-child(1){
-  transform: translateX(-180px) rotate(-10deg);
+  transform: translateX(170px) rotate(-10deg);
 
 
 }
@@ -436,7 +448,7 @@ ul li a{
 
 }
 #landscapes .imageStack:nth-child(3){
-  transform: translateX(170px) rotate(10deg);
+  transform: translateX(-160px) rotate(10deg);
 
 }
 
@@ -444,23 +456,26 @@ ul li a{
 
 
 #landscapes .imageStack:nth-child(1):hover{
-  transform: translateX(-200px) rotate(-15deg);
+  transform: translateX(170px) rotate(-15deg);
 
 
 
 }
 #landscapes .imageStack:nth-child(2):hover{
-  transform: translateX(10px) rotate(2deg);
+  transform: translateX(0px) rotate(2deg);
+  z-index: 1;
 
 
 
 }
 #landscapes .imageStack:nth-child(3):hover{
-  transform: translateX(210px) rotate(15deg);
+  transform: translateX(-160px) rotate(15deg);
+  z-index: 1;
+
 }
 .imageStack{
   filter: grayscale(1);
-  transition: transform 1s ease, filter 1s ease;
+  transition: transform 0.5s ease, filter 1s ease, z-index 0.5s ease;
   cursor: pointer;
 }
 .imageStack:hover{
@@ -578,6 +593,8 @@ ul li a{
     
 
   } 
+
+  
   .imageContainer .prev,
   .imageContainer .next {
     
@@ -634,4 +651,46 @@ ul li a{
     color: white;
     font-size: 2rem;
     text-align: center;
+  }
+
+  .image-holder{
+    display: flex;
+    width: 60%;
+    height: 100%;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+  }
+
+  .text-holder{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 0 2rem;
+  }
+
+  .text-holder a{
+    color: black;
+    text-decoration: none;
+    font-family: "Ysabeau SC";
+    font-size: 1rem;
+    border-width: 0;
+    border-bottom: 2px solid transparent;
+    transition: border 0.5s ease, gap 1s ease-in-out;
+    display: flex;
+    align-items: center;
+    gap: 0;
+  }
+
+  .text-holder a:hover{
+    border-bottom: 2px solid black;
+    gap: 1rem;
+    transition: border 0.5s ease, gap 0.2s ease-in-out;
+  }
+
+  .text-holder a i{
+    margin-left: 0.5rem;
+    align-self: center;
   }
