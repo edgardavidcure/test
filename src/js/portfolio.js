@@ -1,5 +1,7 @@
 import { getDataFromJson, sendEmail, fadeInSection } from "./utils.mjs"
+import {Cloudinary} from "@cloudinary/url-gen";
 
+const cld = new Cloudinary({cloud: {cloudName: 'dc5sxvsrd'}});
 
 const portraitsContainer = document.querySelector("#portraits")
 const automotiveContainer = document.querySelector("#automotive")
