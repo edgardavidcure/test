@@ -349,6 +349,7 @@ ul li a{
   position: relative;
   z-index: 1;
   overflow: hidden;
+  padding: 5rem 0;
   
 }
 
@@ -941,6 +942,7 @@ ul li a{
  gap: 3rem;
   height: 65vh;
   min-height: 450px;
+  padding: unset;
 }
 .goldCircle {
   width: 200px;
