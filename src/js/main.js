@@ -59,7 +59,11 @@ async function displayLandingImages(){
 
   // Start observing each image container
   // imageContainers.forEach(container => intersectionObserver.observe(container));
-  observeImages()
+  const imagesElement = document.querySelectorAll(".imageStack")
+
+  observeImages(imagesElement)
+  addMouseHoverToImages(imagesElement)
+
 }
 displayLandingImages()
 
@@ -178,25 +182,30 @@ document.addEventListener('DOMContentLoaded', function() {
 // };
 
 
+
 function randomlyRemoveGrayscale(images) {
+  
+ 
   const randomIndex = Math.floor(Math.random() * images.length);
   const imageToShow = images[randomIndex];
-  
-  imageToShow.style.filter = "none";
-  
+
+  imageToShow.style.filter = "grayscale(0)";
   setTimeout(() => {
     imageToShow.style.filter = 'grayscale(1)';
-    randomlyRemoveGrayscale(images);
-  }, 3000); 
+  }, 2000);
+    
+ 
 }
 
-function observeImages() {
-  const images = document.querySelectorAll('.imageStack');
+function observeImages(images) {
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        randomlyRemoveGrayscale(images);
+        setInterval(() => {
+          randomlyRemoveGrayscale(images);
+        }, 2000);
+        
       }
     });
   });
@@ -204,8 +213,23 @@ function observeImages() {
   images.forEach((image) => observer.observe(image));
 }
 
-fadeInSection(".imageContainer")
 
+
+
+function addMouseHoverToImages(images){
+  images.forEach(imageToShow => {
+    imageToShow.addEventListener('mouseover', () => {
+      imageToShow.style.filter = 'grayscale(0)';
+    });
+    
+    imageToShow.addEventListener('mouseout', () => {
+      imageToShow.style.filter = 'grayscale(1)';
+    });
+  });
+}
+
+
+fadeInSection(".imageContainer")
 
 const contact = document.getElementById("emailButton");
 contact.addEventListener("click", sendEmail)

@@ -1,4 +1,4 @@
-import { getDataFromJson, sendEmail } from "./utils.mjs"
+import { getDataFromJson, sendEmail, fadeInSection } from "./utils.mjs"
 
 
 const portraitsContainer = document.querySelector("#portraits")
@@ -176,14 +176,6 @@ function headerLinksTransition(){ setTimeout(() => {
     }, 800);
   }
 
-setTimeout(() => {
-    const elements = document.querySelectorAll(".transition3");
-    for (let item of elements){
-        item.style.opacity = "1"
-    }
-}, 1000);
-
-
   function setActiveImage(carousel) {
     const carouselRect = carousel.getBoundingClientRect();
   
@@ -232,3 +224,4 @@ setTimeout(() => {
 getImages();
 headerLinksTransition()
 plusGallery()
+fadeInSection(".transition3")

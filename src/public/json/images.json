@@ -55,6 +55,9 @@
             "path": "/images/cars18.jpg"
         },
         {
+            "path": "/images/cars25.jpeg"
+        },
+        {
             "path": "/images/cars30.jpg"
         },
         {
@@ -298,6 +301,9 @@
         },
         {
             "path": "/images/others13.jpeg"
+        },
+        {
+            "path": "/images/others14.jpeg"
         }
     ]
 
