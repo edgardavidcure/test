@@ -13,7 +13,7 @@
         <nav class="transition5">
             <ul>
                 <li><a href="portfolio/portfolio.html" >Portfolio</a></li>
-                <li><a href="#contact">Contact Me</a></li>
+                <li><a href="#contact" >Contact Me</a></li>
             </ul>
         </nav>
         
@@ -30,7 +30,9 @@
                 </div>
             </div>
             <div class="hero-content">
-                <h1 class="typewriter-h1"></h1>
+                <!-- <h1 class="typewriter-h1"></h1> -->
+                <h1 class="animated">Light And Shadows</h1>
+
                 <p class="typewriter-p"></p>
                 <a href="#portfolio" class="floating-button transition5">
                     <span class="fa-solid fa-chevron-down"></span>
@@ -39,7 +41,13 @@
             
           </section>
         <div id="portfolio">
+            
+             
+              
             <div id="portraits" class="imageContainer ">
+                <div class="goldCircle">
+                    <div class="reflection"></div>
+                  </div>
                 <div class="text-holder">
                     <h1 >Portraits</h1>
                     <a href="portfolio/portfolio.html#portraitsContainer">View More <i class="fa-solid fa-arrow-right-long"></i></a>
@@ -54,6 +62,9 @@
            
     
             <div id="automotive" class="imageContainer ">
+                <div class="goldCircle">
+                    <div class="reflection"></div>
+                  </div>
                 <div class="text-holder">
                     <h1>Automotive</h1>
                     <a href="portfolio/portfolio.html#automotiveContainer">View More <i class="fa-solid fa-arrow-right-long"></i></a>
@@ -68,12 +79,30 @@
             
     
             <div id="landscapes" class="imageContainer ">
+                <div class="goldCircle">
+                    <div class="reflection"></div>
+                  </div>
                 <div class="text-holder">
                     <h1 >Landscapes</h1>
                     <a href="portfolio/portfolio.html#landscapesContainer">View More <i class="fa-solid fa-arrow-right-long"></i></a>
                 </div>
                 <div class="image-holder">
                     <div class="landscapesContainer">
+                    
+                    </div>
+                </div>
+                
+            </div>
+            <div id="others" class="imageContainer ">
+                <div class="goldCircle">
+                    <div class="reflection"></div>
+                  </div>
+                <div class="text-holder">
+                    <h1 >Snapshots</h1>
+                    <a href="portfolio/portfolio.html#othersContainer">View More <i class="fa-solid fa-arrow-right-long"></i></a>
+                </div>
+                <div class="image-holder">
+                    <div class="othersContainer">
                     
                     </div>
                 </div>
@@ -90,16 +119,27 @@
         
     </main>
     <footer>
-        <div id="contact">
-            
-            <a class="headerLinks social transition3" href=""><img src="images/instagram.png" alt=""></a>
-            <div id="personalInfo" class="transition3">
-                <h1>
-                    Terry McBride
-                </h1>
+        <div id="personalInfo" class="transition3">
+                <img src="/images/terryPortrait.jpeg" alt="Portrait Of Terry">
+                <h1>Terry McBride</h1>
+                <h2>Professional Photographer</h2>
                 <p>Tdmcbride15@yahoo.com</p>
-            </div>
         </div>
+        <div id="contact">
+            <div id="links">
+                <div id="instagram">
+                    <a class="headerLinks social transition3" href="https://www.instagram.com/wizkid909/" target="_blank"><i class="fa-brands fa-instagram"></i>Instagram</a>
+                </div>
+                <div id="email">
+                    <a class="headerLinks social transition3" href="#contact" id="emailButton"><i class="fa-solid fa-envelope"></i>Email</a>
+    
+                </div>
+            </div>
+            
+            
+            
+        </div>
+        
         
     </footer>
     <script src="js/main.js" type="module"></script>

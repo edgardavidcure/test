@@ -55,6 +55,9 @@
             "path": "/images/cars18.jpg"
         },
         {
+            "path": "/images/cars30.jpg"
+        },
+        {
             "path": "/images/moto1.jpg"
         },
         {
@@ -94,6 +97,9 @@
             "path": "/images/portrait2.jpeg"
         },
         {
+            "path": "/images/portrait24.jpg"
+        },
+        {
             "path": "/images/portrait3.jpeg"
         },
         {
@@ -103,7 +109,7 @@
             "path": "/images/portrait5.jpeg"
         },
         {
-            "path": "/images/portrait6.jpeg"
+            "path": "/images/20210107_235511200_iOS.jpg"
         },
         {
             "path": "/images/portrait7.jpeg"
@@ -176,6 +182,36 @@
         },
         {
             "path": "/images/landscape8.jpg"
+        },
+        {
+            "path": "/images/landscapes20.jpg"
+        },
+        {
+            "path": "/images/landscapes23.jpeg"
+        },
+        {
+            "path": "/images/landscapes24.jpg"
+        },
+        {
+            "path": "/images/landscapes25.jpg"
+        },
+        {
+            "path": "/images/landscapes26.jpg"
+        },
+        {
+            "path": "/images/landscapes27.jpg"
+        },
+        {
+            "path": "/images/landscapes28.jpg"
+        },
+        {
+            "path": "/images/landscapes29.jpg"
+        },
+        {
+            "path": "/images/landscapes30.jpg"
+        },
+        {
+            "path": "/images/landscapes31.jpg"
         }
     ],
     "landing":[
@@ -212,7 +248,56 @@
                 {
                     "path": "/images/portrait22.jpg"
                 }
+            ],
+            "others":[
+                {
+                    "path": "/images/others4.jpg"
+                },
+                {
+                    "path": "/images/others10.jpg"
+                },
+                {
+                    "path": "/images/others1.jpg"
+                }
             ]
+        }
+    ],
+    "others":[
+        {
+            "path": "/images/others1.jpg"
+        },
+        {
+            "path": "/images/others2.jpg"
+        },
+        {
+            "path": "/images/others3.jpg"
+        },
+        {
+            "path": "/images/others4.jpg"
+        },
+        {
+            "path": "/images/others5.jpg"
+        },
+        {
+            "path": "/images/others7.jpg"
+        },
+        {
+            "path": "/images/others8.jpg"
+        },
+        {
+            "path": "/images/others9.jpg"
+        },
+        {
+            "path": "/images/others10.jpg"
+        },
+        {
+            "path": "/images/others11.jpg"
+        },
+        {
+            "path": "/images/others12.jpg"
+        },
+        {
+            "path": "/images/others13.jpeg"
         }
     ]
 

@@ -2,7 +2,9 @@
 *{
     margin: 0
 }
-
+html{
+  scroll-behavior: smooth;
+}
 h1, h2{
   font-family: "Ysabeau SC";
   font-size: 3.5rem;
@@ -30,24 +32,86 @@ a{
     grid-row: 1;
 } 
 #contact{
-    background-color: black;
-    margin: 0; 
-    width: 100%;
     display: flex;
-    justify-content: space-between;
-    flex-flow: row-reverse;
+    flex-direction: column;
     align-items: center;
-    height: 100%;
+    justify-content: space-around;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+    height: 200px;
+    justify-self: center;
+
 } 
+.portfolioPage #contact{
+  color: white;
+}
+
+.portfolioPage #contact #links a{
+  color: white;
+}
+
+.portfolioPage #contact #links i{
+  color: white;
+}
+#links{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 3rem;
+}
+
+#links #instagram a{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  font-size: 1.5rem;
+}
+#links #email a{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  font-size: 1.5rem;
+
+}
+#links a{
+  transition: 0.5s transform ease;
+}
+
+#links a:hover{
+  transform: scale(1.1);
+}
+
+#links i{
+  font-size: 3rem;
+  color: #606060;
+}
 #personalInfo{
   display: flex;
   flex-direction: column;
-  padding-left: 20px;
+  width: 100%;
+  background-color: #dcdada;
+  margin-top: 5rem;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 0;
 } 
 
-#personalInfo h1, #personalInfo p{
-  color: white;
-  height: 100%;
+#personalInfo h1, #personalInfo h2{
+  color: black;
+  font-size: 1.5rem;
+}
+
+#personalInfo p{
+  font-size: 1rem;
+}
+
+#personalInfo img{
+  height: 200px;
+  width: auto;
+  border-radius: 50%;
 }
 .social{
   padding-right: 20px;
@@ -233,10 +297,10 @@ ul li a{
 
 
 .firstCircleTransition {
-    transition:  opacity 2s ease-in-out, border 2s ease, left 3s ease-in-out;
+    transition:  opacity 2s ease-in-out, border 2s ease, left 2s ease-in-out;
 }
 .secondCircleTransition {
-    transition:  opacity 2s ease-in-out, border 2s ease, right 3s ease-in-out;
+    transition:  opacity 2s ease-in-out, border 2s ease, right 2s ease-in-out;
 }
 
 .transition3{
@@ -278,16 +342,35 @@ ul li a{
   flex-direction: column;
   gap: 15rem;
 }
-#portraits, #automotive, #landscapes{
+#portraits, #automotive, #landscapes, #others{
   min-height: 600px;
-  height: 50vh;
+  height: 80vh;
   display: flex;
   margin: 0;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  
 }
-.portfolioPage #portraits, .portfolioPage #automotive, .portfolioPage #landscapes{
+
+#portfolio .imageContainer{
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+#portfolio .imageContainer.fade-in-visible {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+
+}
+
+
+.text-holder{
+  z-index: 1;
+}
+.portfolioPage #portraits, .portfolioPage #automotive, .portfolioPage #landscapes, .portfolioPage #others{
   margin: unset;
   flex-direction: unset;
   align-items: unset;
@@ -296,10 +379,15 @@ ul li a{
   height: 100%;
   justify-content: unset;
   flex-wrap: nowrap;
+  display: flex;
+  align-items: center;
+  position: unset;
+  z-index: 1;
+  overflow-x: scroll;
 
 }
 
-#portraitsContainer, #automotiveContainer, #landscapesContainer{
+#portraitsContainer, #automotiveContainer, #landscapesContainer, #othersContainer{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -314,7 +402,7 @@ ul li a{
 
 .portfolioPage .column img{
   max-height: 50vh;
-  min-height: 500px;
+  min-height: 350px;
 }
 
 .portfolioPage .imageContainer {
@@ -326,12 +414,14 @@ ul li a{
   overflow-x: scroll;
   white-space: nowrap;
   scroll-behavior: smooth;
+  gap: 0.5rem;
+  
 }
 
-#automotive{
+#automotive, #others{
   flex-direction: row-reverse;
 }
-#automotive .automotiveContainer{
+#automotive .automotiveContainer, #others .othersContainer{
   left: 0;
 }
 #portfolio img{
@@ -345,7 +435,7 @@ ul li a{
   z-index: 0;
   
 }
-.automotiveContainer, .portraitContainer, .landscapesContainer{
+.automotiveContainer, .portraitContainer, .landscapesContainer, .othersContainer{
   margin: 0 auto;
   /* position: relative; */
   top: 0;
@@ -393,9 +483,44 @@ ul li a{
 }
 
 /*  */
+#others .imageStack:nth-child(1){
+  transform: translateX(120px) rotate(-10deg);
+
+
+}
+#others .imageStack:nth-child(2){
+  transform: translateX(-10px) rotate(0deg);
+}
+
+#others .imageStack:nth-child(3){
+  transform: translateX(-150px) rotate(10deg);
+
+}
+
+
+
+
+#others .imageStack:nth-child(1):hover{
+  transform: translateX(120px) rotate(-15deg);
+  
+
+
+}
+#others .imageStack:nth-child(2):hover{
+  transform: translateX(-10px) rotate(2deg);
+  z-index: 1;
+
+
+
+}
+#others .imageStack:nth-child(3):hover{
+  transform: translateX(-150px) rotate(15deg);
+  z-index: 1;
+
+}
 
 #portraits .imageStack:nth-child(1){
-  transform: translateX(170px) rotate(-10deg);
+  transform: translateX(140px) rotate(-10deg);
 
 
 }
@@ -406,7 +531,7 @@ ul li a{
 
 }
 #portraits .imageStack:nth-child(3){
-  transform: translateX(-160px) rotate(10deg);
+  transform: translateX(-150px) rotate(10deg);
 
 }
 
@@ -414,7 +539,7 @@ ul li a{
 
 
 #portraits .imageStack:nth-child(1):hover{
-  transform: translateX(170px) rotate(-15deg);
+  transform: translateX(140px) rotate(-15deg);
 
 
 }
@@ -426,7 +551,7 @@ ul li a{
 
 }
 #portraits .imageStack:nth-child(3):hover{
-  transform: translateX(-160px) rotate(15deg);
+  transform: translateX(-150px) rotate(15deg);
   z-index: 1;
 
 }
@@ -495,7 +620,6 @@ ul li a{
     filter: grayscale(1);
     cursor: pointer;
     opacity: 0;
-    padding: 10px;
 
   }
 
@@ -504,6 +628,10 @@ ul li a{
     transition: filter 1s ease;
   }
   
+  
+  .column.active .align-image {
+    filter: none;
+  }
  
   
  
@@ -666,9 +794,11 @@ ul li a{
     width: fit-content;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     margin: 0 2rem;
+    min-width: 30vw;
+    justify-self: center;
   }
 
   .text-holder a{
@@ -693,4 +823,89 @@ ul li a{
   .text-holder a i{
     margin-left: 0.5rem;
     align-self: center;
+
   }
+
+  .goldCircle {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(246, 228, 131, 0.8) 1px, white 70%);
+    position: absolute;
+    overflow: hidden;
+    animation: 10s reflection infinite linear;
+    top: 3rem;
+    left: -13rem;
+    z-index: 0;
+  }
+  
+  .reflection {
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: scaleY(0.5);
+    opacity: 0.4; /* Adjust the opacity to make the reflection lighter */
+  }
+  
+
+  #automotive .goldCircle, #others .goldCircle{
+    left: unset;
+    right: -13rem;
+
+  }
+  
+
+  @keyframes reflection {
+    0% {
+      transform: translateY(-100px);
+    }
+    50%{
+      transform: translateY(0) translateX(20px);
+    }
+    100% {
+      transform: translateY(-100px) translateX(0px);
+
+    }
+  }
+
+  .animated {
+    -webkit-animation-duration: 10s;
+    animation-duration: 10s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    color: white;
+    display: none;
+    font-size: 2.5rem;
+    padding-top: 0;
+
+ }
+ 
+ @-webkit-keyframes fadeInDown {
+    0% {
+       opacity: 0;
+       -webkit-transform: translateY(-20px);
+    }
+    100% {
+       opacity: 1;
+       -webkit-transform: translateY(0);
+    }
+ }
+ 
+ @keyframes fadeInDown {
+    0% {
+       opacity: 0;
+       transform: translateY(-20px);
+    }
+    100% {
+       opacity: 1;
+       transform: translateY(0);
+    }
+ }
+ 
+ .fadeInDown {
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+    animation-duration: 1s;
+ }

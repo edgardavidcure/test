@@ -1,4 +1,5 @@
 import { centerItem, getDataFromJson} from "./utils.mjs";
+import { fadeInSection, sendEmail } from "./utils.mjs";
 const transitionElement = document.querySelector('.transition3');
 const lastTypeEffect = document.querySelector(".typewriter-h1")
 const circles = document.querySelectorAll(".circle");
@@ -11,13 +12,13 @@ window.onload = function addClass(){
 
 
 
-function aftertypeeffect(){ setTimeout(() => {
-  const headerLinks = document.querySelectorAll(".transition4");
-  for (let item of headerLinks){
-      item.style.opacity = "1"
-  }
-}, 4100);
-}
+// function aftertypeeffect(){ setTimeout(() => {
+//   const headerLinks = document.querySelectorAll(".transition4");
+//   for (let item of headerLinks){
+//       item.style.opacity = "1"
+//   }
+// }, 2100);
+// }
 
 
 function headerLinksTransition(){ setTimeout(() => {
@@ -30,7 +31,7 @@ function headerLinksTransition(){ setTimeout(() => {
     scrollButton.classList.add("scroll-button")
     
   }, 1000);
-  }, 8500);
+  }, 5000);
 }
 
 async function getLandingImages(){
@@ -45,14 +46,20 @@ async function displayLandingImages(){
   const automotiveImages = images.automotive
   const portraitImages = images.portraits 
   const landscapeImages = images.landscapes 
+  const othersImages = images.others
   const automotiveContainer = document.querySelector(".automotiveContainer")
   const portraitContainer = document.querySelector(".portraitContainer")
   const landscapesContainer = document.querySelector(".landscapesContainer")
+  const othersContainer = document.querySelector(".othersContainer")
   createImageElements(automotiveImages, automotiveContainer)
   createImageElements(portraitImages, portraitContainer)
   createImageElements(landscapeImages, landscapesContainer)
+  createImageElements(othersImages, othersContainer)
+  // const intersectionObserver = new IntersectionObserver(intersectionCallback, options);
 
-
+  // Start observing each image container
+  // imageContainers.forEach(container => intersectionObserver.observe(container));
+  observeImages()
 }
 displayLandingImages()
 
@@ -66,25 +73,14 @@ function createImageElements(imageType, element){
 }
 
 function loadTypedText(){
-  setTimeout(() => {
-      const typedHeader = new Typed('.typewriter-h1', {
-          strings: ['Light and Shadows'],
-          typeSpeed: 70,
-          showCursor: false,
-          onComplete: function() {
-            const typedParag = new Typed('.typewriter-p', {
+  setTimeout(() => { const typedParag = new Typed('.typewriter-p', {
               strings: ['A Gallery By Terry McBride'],
-              typeSpeed: 50,
+              typeSpeed: 40,
               showCursor: false,
-              onComplete: function(){
-                  aftertypeeffect()
-  
-              }
             });
-          }
-        });
-  }, 4000);
-}  
+        
+  }, 3200);
+}
 setTimeout(() => {
     const firstCircle = document.querySelector(".first");
     const secondCircle =  document.querySelector(".last");
@@ -95,7 +91,7 @@ setTimeout(() => {
     firstCircle.style.display = "none"
     secondCircle.style.display = "none"
     
-}, 4000);
+}, 2600);
 
 
 
@@ -104,11 +100,20 @@ setTimeout(() => {
     for (let item of links){
         item.style.opacity = "1"
     }
-}, 3300);
+}, 2100);
 
 
+setTimeout(() => {
+  const links = document.querySelectorAll(".animated");
+  for (let item of links){
+      item.classList.add("fadeInDown")
+      item.style.display = "block"
+      console.log(item)
+  }
+}, 2500);
 
 
+getLandingImages()
 
 
 
@@ -128,7 +133,7 @@ document.addEventListener('DOMContentLoaded', function() {
   headerLinksTransition()
   window.addEventListener('load', centerItem);
   loadTypedText()
-
+  
 
 
 
@@ -137,4 +142,70 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-getLandingImages()
+
+// // Function to remove the grayscale filter from an image
+// function removeGrayscaleFromImage(image) {
+//   image.style.filter = 'none';
+// }
+// function addGrayscaleFromImage(image) {
+//   image.style.filter = 'grayScale(1)';
+// }
+// // Intersection Observer callback function
+// function intersectionCallback(entries, observer) {
+//   entries.forEach(entry => {
+//     if (entry.isIntersecting) {
+//       const images = entry.target.querySelectorAll(".imageStack")
+//       console.log(images)
+//       images.forEach(image => removeGrayscaleFromImage(image));
+//       // Unobserve the target once the grayscale filter is removed (optional)
+//       // observer.unobserve(entry.target);
+//     } else{
+//       const images = entry.target.querySelectorAll(".imageStack")
+//       images.forEach(image => addGrayscaleFromImage(image));
+//       // observer.unobserve(entry.target);
+
+
+//     }
+//   });
+// }
+
+// // Creating the Intersection Observer
+// const imageContainers = document.querySelectorAll('.imageContainer');
+// const options = {
+//   root: null, // Use the viewport as the root
+//   rootMargin: '0px', // No margin
+//   threshold: 0.6, // 50% visible is enough to trigger the callback
+// };
+
+
+function randomlyRemoveGrayscale(images) {
+  const randomIndex = Math.floor(Math.random() * images.length);
+  const imageToShow = images[randomIndex];
+  
+  imageToShow.style.filter = "none";
+  
+  setTimeout(() => {
+    imageToShow.style.filter = 'grayscale(1)';
+    randomlyRemoveGrayscale(images);
+  }, 3000); 
+}
+
+function observeImages() {
+  const images = document.querySelectorAll('.imageStack');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        randomlyRemoveGrayscale(images);
+      }
+    });
+  });
+
+  images.forEach((image) => observer.observe(image));
+}
+
+fadeInSection(".imageContainer")
+
+
+const contact = document.getElementById("emailButton");
+contact.addEventListener("click", sendEmail)

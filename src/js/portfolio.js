@@ -1,9 +1,10 @@
-import { getDataFromJson } from "./utils.mjs"
+import { getDataFromJson, sendEmail } from "./utils.mjs"
 
 
 const portraitsContainer = document.querySelector("#portraits")
 const automotiveContainer = document.querySelector("#automotive")
 const landscapesContainer = document.querySelector("#landscapes")
+const othersContainer = document.querySelector("#others")
 const imgContainer = document.querySelector(".imageContainer")
 
 const modalContainer = document.querySelector(".modal-content")
@@ -22,13 +23,15 @@ async function getImages(){
     modalTypes.automotive = data.automotive;
     modalTypes.landscapes = data.landscapes;
     modalTypes.portraits = data.portraits;
-  
+    modalTypes.others = data.others;
     displayImages(data.portraits, "portraits", portraitsContainer);
     displayImages(data.automotive, "automotive", automotiveContainer);
     displayImages(data.landscapes, "landscapes", landscapesContainer);
+    displayImages(data.others, "others", othersContainer)
     displayModalImages(data.portraits, "portraits");
     displayModalImages(data.automotive, "automotive");
     displayModalImages(data.landscapes, "landscapes");
+    displayModalImages(data.others, "others")
     addModalListeners()
 
     setTimeout(() => {
@@ -37,6 +40,7 @@ async function getImages(){
             item.style.opacity = "1"
         }
     }, 500);
+    observeCarousels()
     
 }
 
@@ -134,6 +138,7 @@ function plusGallery() {
         element.addEventListener("click", function(){
             let container = element.parentNode
             container.scrollBy(-300, 0);
+            setTimeout(() => setActiveImage(container), 400);
 
         })
     });
@@ -141,9 +146,11 @@ function plusGallery() {
         element.addEventListener("click", function(){
             let container = element.parentNode
             container.scrollBy(+300, 0);
+            setTimeout(() => setActiveImage(container), 400);
 
         })
     });
+
 }
 
 function showSlides(n, type) {
@@ -175,6 +182,53 @@ setTimeout(() => {
         item.style.opacity = "1"
     }
 }, 1000);
+
+
+  function setActiveImage(carousel) {
+    const carouselRect = carousel.getBoundingClientRect();
+  
+    let minDistance = Infinity;
+    let activeColumn = null;
+    const columns = carousel.querySelectorAll('.column');
+    columns.forEach((column) => {
+      const columnRect = column.getBoundingClientRect();
+      const distance = columnRect.left - carouselRect.left;
+      if (distance >= 0 && distance < minDistance) {
+        minDistance = distance;
+        activeColumn = column;
+      }
+    });
+  
+    columns.forEach((column) => column.classList.remove('active'));
+    if (activeColumn && carousel.classList.contains('intersecting')) {
+      activeColumn.classList.add('active');
+    }
+  }
+  
+  function observeCarousels() {
+    const carousels = document.querySelectorAll('.imageContainer');
+    carousels.forEach((carousel) => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+
+          if (entry.isIntersecting) {
+            carousel.classList.add('intersecting');
+            setActiveImage(carousel);
+            window.addEventListener('scroll', () => setActiveImage(carousel));
+          } else{
+            carousel.classList.remove('intersecting');
+          }
+        });
+    },{
+        threshold: 0.6
+    });
+  
+      observer.observe(carousel);
+    });
+  }
+  const contact = document.getElementById("emailButton");
+  contact.addEventListener("click", sendEmail)
+
 getImages();
 headerLinksTransition()
 plusGallery()
