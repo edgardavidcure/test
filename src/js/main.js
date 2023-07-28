@@ -1,5 +1,8 @@
 import { centerItem, getDataFromJson} from "./utils.mjs";
 import { fadeInSection, sendEmail } from "./utils.mjs";
+import {Cloudinary} from "@cloudinary/url-gen";
+
+const cld = new Cloudinary({cloud: {cloudName: 'dc5sxvsrd'}});
 const transitionElement = document.querySelector('.transition3');
 const lastTypeEffect = document.querySelector(".typewriter-h1")
 const circles = document.querySelectorAll(".circle");
