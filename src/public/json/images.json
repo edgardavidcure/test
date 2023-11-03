@@ -1,311 +1,362 @@
 {
-    "automotive":[
-        {
-            "path": "/images/cars1.jpeg"
-        },
-        {
-            "path": "/images/cars2.jpeg"
-        },
-        {
-            "path": "/images/cars3.jpeg"
-        },
-        {
-            "path": "/images/cars4.jpg"
-        },
-        {
-            "path": "/images/cars5.jpg"
-        },
-        {
-            "path": "/images/cars6.jpg"
-        },
-        {
-            "path": "/images/cars7.jpg"
-        },
-        {
-            "path": "/images/cars8.jpg"
-        },
-        {
-            "path": "/images/cars9.jpg"
-        },
-        {
-            "path": "/images/cars10.jpg"
-        },
-        {
-            "path": "/images/cars11.jpg"
-        },
-        {
-            "path": "/images/cars12.jpg"
-        },
-        {
-            "path": "/images/cars13.jpg"
-        },
-        {
-            "path": "/images/cars14.jpg"
-        },
-        {
-            "path": "/images/cars15.jpg"
-        },
-        {
-            "path": "/images/cars16.jpg"
-        },
-        {
-            "path": "/images/cars17.jpg"
-        },
-        {
-            "path": "/images/cars18.jpg"
-        },
-        {
-            "path": "/images/cars25.jpeg"
-        },
-        {
-            "path": "/images/cars30.jpg"
-        },
-        {
-            "path": "/images/moto1.jpg"
-        },
-        {
-            "path": "/images/moto2.jpg"
-        },
-        {
-            "path": "/images/moto3.jpg"
-        },
-        {
-            "path": "/images/moto4.jpg"
-        },
-        {
-            "path": "/images/moto5.jpg"
-        },
-        {
-            "path": "/images/moto6.jpg"
-        },
-        {
-            "path": "/images/moto7.jpg"
-        },
-        {
-            "path": "/images/moto8.jpg"
-        },
-        {
-            "path": "/images/moto9.jpg"
-        },
-        {
-            "path": "/images/moto10.jpg"
-        }
-    ],
+  "automotive": [
+    {
+      "path": "/images/cars2.jpeg"
+    },
+    {
+      "path": "/images/automotive50.jpg"
+    },
+    {
+      "path": "/images/cars1.jpeg"
+    },
+    {
+      "path": "/images/cars3.jpeg"
+    },
+    {
+      "path": "/images/cars4.jpg"
+    },
+    {
+      "path": "/images/cars5.jpg"
+    },
+    {
+      "path": "/images/cars6.jpg"
+    },
+    {
+      "path": "/images/cars7.jpg"
+    },
+    {
+      "path": "/images/cars8.jpg"
+    },
+    {
+      "path": "/images/cars9.jpg"
+    },
+    {
+      "path": "/images/cars10.jpg"
+    },
+    {
+      "path": "/images/cars11.jpg"
+    },
+    {
+      "path": "/images/cars12.jpg"
+    },
+    {
+      "path": "/images/cars13.jpg"
+    },
+    {
+      "path": "/images/cars14.jpg"
+    },
+    {
+      "path": "/images/cars15.jpg"
+    },
+    {
+      "path": "/images/cars16.jpg"
+    },
+    {
+      "path": "/images/cars17.jpg"
+    },
+    {
+      "path": "/images/cars18.jpg"
+    },
+    {
+      "path": "/images/cars25.jpeg"
+    },
+    {
+      "path": "/images/cars30.jpg"
+    },
+    {
+      "path": "/images/moto1.jpg"
+    },
+    {
+      "path": "/images/moto2.jpg"
+    },
+    {
+      "path": "/images/moto3.jpg"
+    },
+    {
+      "path": "/images/moto4.jpg"
+    },
+    {
+      "path": "/images/moto5.jpg"
+    },
+    {
+      "path": "/images/moto6.jpg"
+    },
+    {
+      "path": "/images/moto7.jpg"
+    },
+    {
+      "path": "/images/moto8.jpg"
+    },
+    {
+      "path": "/images/moto9.jpg"
+    },
+    {
+      "path": "/images/moto10.jpg"
+    }
+  ],
 
-    "portraits":[
+  "portraits": [
+    {
+      "path": "/images/portrait50.jpg"
+    },
+    {
+      "path": "/images/portrait51.jpg"
+    },
+    {
+      "path": "/images/portrait52.jpg"
+    },
+    {
+      "path": "/images/portrait53.jpg"
+    },
+    {
+      "path": "/images/portrait54.jpg"
+    },
+    {
+      "path": "/images/portrait55.jpg"
+    },
+    {
+      "path": "/images/portrait56.jpg"
+    },
+    {
+      "path": "/images/portrait1.jpeg"
+    },
+    {
+      "path": "/images/portrait3.jpeg"
+    },
+    {
+      "path": "/images/portrait2.jpeg"
+    },
+    {
+      "path": "/images/portrait24.jpg"
+    },
+    {
+      "path": "/images/portrait4.jpeg"
+    },
+    {
+      "path": "/images/portrait5.jpeg"
+    },
+    {
+      "path": "/images/20210107_235511200_iOS.jpg"
+    },
+    {
+      "path": "/images/portrait7.jpeg"
+    },
+    {
+      "path": "/images/portrait9.jpg"
+    },
+    {
+      "path": "/images/portrait10.jpg"
+    },
+    {
+      "path": "/images/portrait12.jpg"
+    },
+    {
+      "path": "/images/portrait13.jpg"
+    },
+    {
+      "path": "/images/portrait57.jpg"
+    },
+    {
+      "path": "/images/portrait58.jpg"
+    },
+    {
+      "path": "/images/portrait14.jpg"
+    },
+    {
+      "path": "/images/portrait15.jpg"
+    },
+    {
+      "path": "/images/portrait16.jpg"
+    },
+    {
+      "path": "/images/portrait17.jpg"
+    },
+    {
+      "path": "/images/portrait18.jpg"
+    },
+    {
+      "path": "/images/portrait19.jpg"
+    },
+    {
+      "path": "/images/portrait20.jpg"
+    },
+    {
+      "path": "/images/portrait21.jpg"
+    },
+    {
+      "path": "/images/portrait22.jpg"
+    },
+    {
+      "path": "/images/portrait23.jpg"
+    }
+  ],
+  "landscapes": [
+    {
+      "path": "/images/landscape50.jpg"
+    },
+    {
+      "path": "/images/landscape51.jpg"
+    },
+    {
+      "path": "/images/landscape52.jpg"
+    },
+    {
+      "path": "/images/landscape53.jpg"
+    },
+    {
+      "path": "/images/landscape54.jpg"
+    },
+    {
+      "path": "/images/landscape55.jpg"
+    },
+    {
+      "path": "/images/landscape56.jpg"
+    },
+    {
+      "path": "/images/landscape1.jpeg"
+    },
+    {
+      "path": "/images/landscape2.jpg"
+    },
+    {
+      "path": "/images/landscape3.jpg"
+    },
+    {
+      "path": "/images/landscape4.jpg"
+    },
+    {
+      "path": "/images/landscape5.jpg"
+    },
+    {
+      "path": "/images/landscape6.jpg"
+    },
+    {
+      "path": "/images/landscape7.jpg"
+    },
+    {
+      "path": "/images/landscape8.jpg"
+    },
+    {
+      "path": "/images/landscapes20.jpg"
+    },
+    {
+      "path": "/images/landscapes23.jpeg"
+    },
+    {
+      "path": "/images/landscapes24.jpg"
+    },
+    {
+      "path": "/images/landscapes25.jpg"
+    },
+    {
+      "path": "/images/landscapes26.jpg"
+    },
+    {
+      "path": "/images/landscapes27.jpg"
+    },
+    {
+      "path": "/images/landscapes28.jpg"
+    },
+    {
+      "path": "/images/landscapes29.jpg"
+    },
+    {
+      "path": "/images/landscapes30.jpg"
+    },
+    {
+      "path": "/images/landscapes31.jpg"
+    }
+  ],
+  "landing": [
+    {
+      "automotive": [
         {
-            "path": "/images/portrait1.jpeg"
+          "path": "/images/cars18.jpg"
         },
         {
-            "path": "/images/portrait2.jpeg"
+          "path": "/images/cars3.jpeg"
         },
         {
-            "path": "/images/portrait24.jpg"
-        },
-        {
-            "path": "/images/portrait3.jpeg"
-        },
-        {
-            "path": "/images/portrait4.jpeg"
-        },
-        {
-            "path": "/images/portrait5.jpeg"
-        },
-        {
-            "path": "/images/20210107_235511200_iOS.jpg"
-        },
-        {
-            "path": "/images/portrait7.jpeg"
-        },
-        {
-            "path": "/images/portrait9.jpg"
+          "path": "/images/moto2.jpg"
         }
-        ,
+      ],
+      "landscapes": [
         {
-            "path": "/images/portrait10.jpg"
+          "path": "/images/landscape8.jpg"
         },
         {
-            "path": "/images/portrait12.jpg"
+          "path": "/images/landscape2.jpg"
         },
         {
-            "path": "/images/portrait13.jpg"
-        },
-        {
-            "path": "/images/portrait14.jpg"
-        },
-        {
-            "path": "/images/portrait15.jpg"
-        },
-        {
-            "path": "/images/portrait16.jpg"
-        },
-        {
-            "path": "/images/portrait17.jpg"
-        },
-        {
-            "path": "/images/portrait18.jpg"
-        },
-        {
-            "path": "/images/portrait19.jpg"
-        },
-        {
-            "path": "/images/portrait20.jpg"
-        },
-        {
-            "path": "/images/portrait21.jpg"
-        },
-        {
-            "path": "/images/portrait22.jpg"
-        },
-        {
-            "path": "/images/portrait23.jpg"
+          "path": "/images/landscape7.jpg"
         }
-    ],
-    "landscapes":[
+      ],
+      "portraits": [
         {
-            "path": "/images/landscape1.jpeg"
+          "path": "/images/portrait12.jpg"
         },
         {
-            "path": "/images/landscape2.jpg"
+          "path": "/images/portrait17.jpg"
         },
         {
-            "path": "/images/landscape3.jpg"
-        },
-        {
-            "path": "/images/landscape4.jpg"
-        },
-        {
-            "path": "/images/landscape5.jpg"
-        },
-        {
-            "path": "/images/landscape6.jpg"
-        },
-        {
-            "path": "/images/landscape7.jpg"
-        },
-        {
-            "path": "/images/landscape8.jpg"
-        },
-        {
-            "path": "/images/landscapes20.jpg"
-        },
-        {
-            "path": "/images/landscapes23.jpeg"
-        },
-        {
-            "path": "/images/landscapes24.jpg"
-        },
-        {
-            "path": "/images/landscapes25.jpg"
-        },
-        {
-            "path": "/images/landscapes26.jpg"
-        },
-        {
-            "path": "/images/landscapes27.jpg"
-        },
-        {
-            "path": "/images/landscapes28.jpg"
-        },
-        {
-            "path": "/images/landscapes29.jpg"
-        },
-        {
-            "path": "/images/landscapes30.jpg"
-        },
-        {
-            "path": "/images/landscapes31.jpg"
+          "path": "/images/portrait22.jpg"
         }
-    ],
-    "landing":[
+      ],
+      "others": [
         {
-            "automotive":[
-                {
-                    "path": "/images/cars18.jpg"
-                },
-                {
-                    "path": "/images/cars3.jpeg"
-                },
-                {
-                    "path": "/images/moto2.jpg"
-                }
-            ], 
-            "landscapes":[
-                {
-                    "path": "/images/landscape8.jpg"
-                },
-                {
-                    "path": "/images/landscape2.jpg"
-                },
-                {
-                    "path": "/images/landscape7.jpg"
-                }
-            ],
-            "portraits":[
-                {
-                    "path": "/images/portrait12.jpg"
-                },
-                {
-                    "path": "/images/portrait17.jpg"
-                },
-                {
-                    "path": "/images/portrait22.jpg"
-                }
-            ],
-            "others":[
-                {
-                    "path": "/images/others4.jpg"
-                },
-                {
-                    "path": "/images/others10.jpg"
-                },
-                {
-                    "path": "/images/others1.jpg"
-                }
-            ]
+          "path": "/images/others4.jpg"
+        },
+        {
+          "path": "/images/others10.jpg"
+        },
+        {
+          "path": "/images/others1.jpg"
         }
-    ],
-    "others":[
-        {
-            "path": "/images/others1.jpg"
-        },
-        {
-            "path": "/images/others2.jpg"
-        },
-        {
-            "path": "/images/others3.jpg"
-        },
-        {
-            "path": "/images/others4.jpg"
-        },
-        {
-            "path": "/images/others5.jpg"
-        },
-        {
-            "path": "/images/others7.jpg"
-        },
-        {
-            "path": "/images/others8.jpg"
-        },
-        {
-            "path": "/images/others9.jpg"
-        },
-        {
-            "path": "/images/others10.jpg"
-        },
-        {
-            "path": "/images/others11.jpg"
-        },
-        {
-            "path": "/images/others12.jpg"
-        },
-        {
-            "path": "/images/others13.jpeg"
-        },
-        {
-            "path": "/images/others14.jpeg"
-        }
-    ]
-
-
+      ]
+    }
+  ],
+  "others": [
+    {
+      "path": "/images/others1.jpg"
+    },
+    {
+      "path": "/images/others2.jpg"
+    },
+    {
+      "path": "/images/other50.jpg"
+    },
+    {
+      "path": "/images/others3.jpg"
+    },
+    {
+      "path": "/images/others4.jpg"
+    },
+    {
+      "path": "/images/others5.jpg"
+    },
+    {
+      "path": "/images/others7.jpg"
+    },
+    {
+      "path": "/images/others8.jpg"
+    },
+    {
+      "path": "/images/others9.jpg"
+    },
+    {
+      "path": "/images/others10.jpg"
+    },
+    {
+      "path": "/images/others11.jpg"
+    },
+    {
+      "path": "/images/others12.jpg"
+    },
+    {
+      "path": "/images/others13.jpeg"
+    },
+    {
+      "path": "/images/others14.jpeg"
+    }
+  ]
 }

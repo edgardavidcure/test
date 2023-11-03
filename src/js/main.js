@@ -1,17 +1,15 @@
-import { centerItem, getDataFromJson} from "./utils.mjs";
+import { centerItem, getDataFromJson } from "./utils.mjs";
 import { fadeInSection, sendEmail } from "./utils.mjs";
 
-const transitionElement = document.querySelector('.transition3');
-const lastTypeEffect = document.querySelector(".typewriter-h1")
+const transitionElement = document.querySelector(".transition3");
+const lastTypeEffect = document.querySelector(".typewriter-h1");
 const circles = document.querySelectorAll(".circle");
 
-window.onload = function addClass(){
-    for (let circle of circles ) {
-        circle.classList.add("move")
-    }
-}
-
-
+window.onload = function addClass() {
+  for (let circle of circles) {
+    circle.classList.add("move");
+  }
+};
 
 // function aftertypeeffect(){ setTimeout(() => {
 //   const headerLinks = document.querySelectorAll(".transition4");
@@ -21,132 +19,108 @@ window.onload = function addClass(){
 // }, 2100);
 // }
 
-
-function headerLinksTransition(){ setTimeout(() => {
-  const headerLinks = document.querySelectorAll(".transition5");
-  const scrollButton = document.querySelector(".floating-button")
-  for (let item of headerLinks){
-      item.style.opacity = "1"
-  }
+function headerLinksTransition() {
   setTimeout(() => {
-    scrollButton.classList.add("scroll-button")
-    
-  }, 1000);
+    const headerLinks = document.querySelectorAll(".transition5");
+    const scrollButton = document.querySelector(".floating-button");
+    for (let item of headerLinks) {
+      item.style.opacity = "1";
+    }
+    setTimeout(() => {
+      scrollButton.classList.add("scroll-button");
+    }, 1000);
   }, 5000);
 }
 
-async function getLandingImages(){
+async function getLandingImages() {
   const data = await getDataFromJson();
-  const[landingImages] = data.landing;
+  const [landingImages] = data.landing;
   return landingImages;
-  
 }
 
-async function displayLandingImages(){
+async function displayLandingImages() {
   const images = await getLandingImages();
-  const automotiveImages = images.automotive
-  const portraitImages = images.portraits 
-  const landscapeImages = images.landscapes 
-  const othersImages = images.others
-  const automotiveContainer = document.querySelector(".automotiveContainer")
-  const portraitContainer = document.querySelector(".portraitContainer")
-  const landscapesContainer = document.querySelector(".landscapesContainer")
-  const othersContainer = document.querySelector(".othersContainer")
-  createImageElements(automotiveImages, automotiveContainer)
-  createImageElements(portraitImages, portraitContainer)
-  createImageElements(landscapeImages, landscapesContainer)
-  createImageElements(othersImages, othersContainer)
+  const automotiveImages = images.automotive;
+  const portraitImages = images.portraits;
+  const landscapeImages = images.landscapes;
+  const othersImages = images.others;
+  const automotiveContainer = document.querySelector(".automotiveContainer");
+  const portraitContainer = document.querySelector(".portraitContainer");
+  const landscapesContainer = document.querySelector(".landscapesContainer");
+  const othersContainer = document.querySelector(".othersContainer");
+  createImageElements(automotiveImages, automotiveContainer);
+  createImageElements(portraitImages, portraitContainer);
+  createImageElements(landscapeImages, landscapesContainer);
+  createImageElements(othersImages, othersContainer);
   // const intersectionObserver = new IntersectionObserver(intersectionCallback, options);
 
   // Start observing each image container
   // imageContainers.forEach(container => intersectionObserver.observe(container));
-  const imagesElement = document.querySelectorAll(".imageStack")
+  const imagesElement = document.querySelectorAll(".imageStack");
 
-  observeImages(imagesElement)
-  addMouseHoverToImages(imagesElement)
-
+  observeImages(imagesElement);
+  addMouseHoverToImages(imagesElement);
 }
-displayLandingImages()
+displayLandingImages();
 
-function createImageElements(imageType, element){
-  
-  
-  imageType.forEach( image => {
-    const imageElement = `<img src="${image.path}" alt="Photo taken by Terry Mcbride" class="imageStack">`
-    element.insertAdjacentHTML("beforeend", imageElement)
+function createImageElements(imageType, element) {
+  imageType.forEach((image) => {
+    const imageElement = `<img src="${image.path}" alt="Photo taken by Terry Mcbride" class="imageStack">`;
+    element.insertAdjacentHTML("beforeend", imageElement);
   });
 }
 
-function loadTypedText(){
-  setTimeout(() => { const typedParag = new Typed('.typewriter-p', {
-              strings: ['A Gallery By Terry McBride'],
-              typeSpeed: 40,
-              showCursor: false,
-            });
-        
+function loadTypedText() {
+  setTimeout(() => {
+    const typedParag = new Typed(".typewriter-p", {
+      strings: ["A Gallery By Terry McBride"],
+      typeSpeed: 40,
+      showCursor: false,
+    });
   }, 3200);
 }
 setTimeout(() => {
-    const firstCircle = document.querySelector(".first");
-    const secondCircle =  document.querySelector(".last");
-    const logo = document.querySelector(".fixed img");
-    firstCircle.style.opacity = "0";
-    secondCircle.style.opacity = "0";
-    logo.style.opacity = "1";
-    firstCircle.style.display = "none"
-    secondCircle.style.display = "none"
-    
+  const firstCircle = document.querySelector(".first");
+  const secondCircle = document.querySelector(".last");
+  const logo = document.querySelector(".fixed img");
+  firstCircle.style.opacity = "0";
+  secondCircle.style.opacity = "0";
+  logo.style.opacity = "1";
+  firstCircle.style.display = "none";
+  secondCircle.style.display = "none";
 }, 2600);
 
-
-
 setTimeout(() => {
-    const links = document.querySelectorAll(".transition3");
-    for (let item of links){
-        item.style.opacity = "1"
-    }
+  const links = document.querySelectorAll(".transition3");
+  for (let item of links) {
+    item.style.opacity = "1";
+  }
 }, 2100);
-
 
 setTimeout(() => {
   const links = document.querySelectorAll(".animated");
-  for (let item of links){
-      item.classList.add("fadeInDown")
-      item.style.display = "block"
-      console.log(item)
+  for (let item of links) {
+    item.classList.add("fadeInDown");
+    item.style.display = "block";
   }
 }, 2500);
 
+getLandingImages();
 
-getLandingImages()
+document.addEventListener("DOMContentLoaded", function () {
+  const scrollButton = document.querySelector(".floating-button");
 
-
-
-
-
-document.addEventListener('DOMContentLoaded', function() {
-  const scrollButton = document.querySelector('.floating-button');
-
-  scrollButton.addEventListener('click', function(event) {
+  scrollButton.addEventListener("click", function (event) {
     event.preventDefault();
 
-    const portfolioSection = document.querySelector('#portfolio');
-    portfolioSection.scrollIntoView({ behavior: 'smooth' });
-    
+    const portfolioSection = document.querySelector("#portfolio");
+    portfolioSection.scrollIntoView({ behavior: "smooth" });
   });
 
-  headerLinksTransition()
-  window.addEventListener('load', centerItem);
-  loadTypedText()
-  
-
-
-
-
-
+  headerLinksTransition();
+  window.addEventListener("load", centerItem);
+  loadTypedText();
 });
-
-
 
 // // Function to remove the grayscale filter from an image
 // function removeGrayscaleFromImage(image) {
@@ -169,7 +143,6 @@ document.addEventListener('DOMContentLoaded', function() {
 //       images.forEach(image => addGrayscaleFromImage(image));
 //       // observer.unobserve(entry.target);
 
-
 //     }
 //   });
 // }
@@ -182,31 +155,23 @@ document.addEventListener('DOMContentLoaded', function() {
 //   threshold: 0.6, // 50% visible is enough to trigger the callback
 // };
 
-
-
 function randomlyRemoveGrayscale(images) {
-  
- 
   const randomIndex = Math.floor(Math.random() * images.length);
   const imageToShow = images[randomIndex];
 
   imageToShow.style.filter = "grayscale(0)";
   setTimeout(() => {
-    imageToShow.style.filter = 'grayscale(1)';
+    imageToShow.style.filter = "grayscale(1)";
   }, 2000);
-    
- 
 }
 
 function observeImages(images) {
-
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         setInterval(() => {
           randomlyRemoveGrayscale(images);
         }, 2000);
-        
       }
     });
   });
@@ -214,23 +179,19 @@ function observeImages(images) {
   images.forEach((image) => observer.observe(image));
 }
 
-
-
-
-function addMouseHoverToImages(images){
-  images.forEach(imageToShow => {
-    imageToShow.addEventListener('mouseover', () => {
-      imageToShow.style.filter = 'grayscale(0)';
+function addMouseHoverToImages(images) {
+  images.forEach((imageToShow) => {
+    imageToShow.addEventListener("mouseover", () => {
+      imageToShow.style.filter = "grayscale(0)";
     });
-    
-    imageToShow.addEventListener('mouseout', () => {
-      imageToShow.style.filter = 'grayscale(1)';
+
+    imageToShow.addEventListener("mouseout", () => {
+      imageToShow.style.filter = "grayscale(1)";
     });
   });
 }
 
-
-fadeInSection(".imageContainer")
+fadeInSection(".imageContainer");
 
 const contact = document.getElementById("emailButton");
-contact.addEventListener("click", sendEmail)
+contact.addEventListener("click", sendEmail);
