@@ -198,6 +198,8 @@ function observeCarousels() {
             carousel.classList.add("intersecting");
             setActiveImage(carousel);
             window.addEventListener("scroll", () => setActiveImage(carousel));
+            window.addEventListener("touchend", () => setActiveImage(carousel));
+            carousel.addEventListener("scroll", () => setActiveImage(carousel));
           } else {
             carousel.classList.remove("intersecting");
           }
